@@ -4,11 +4,12 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                bat 'javac index.java'
+                bat 'javac devops1.java'
             }
         }  
 stages('Run'){
   steps{
-    bat 'java index'
+    bat 'java devops1.java'
     }
+}
 }
