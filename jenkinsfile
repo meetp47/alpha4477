@@ -2,6 +2,13 @@ pipeline {
     agent any
 
     stages {
+        stage('clone') {
+            steps {
+                git branch: 'main', credentialsId: 'be70cd08-a4f9-4edb-8568-c5d65c894adc', url: 'https://github.com/meetp47/alpha4477.git'
+            }
+        }  
+
+
         stage('Compile') {
             steps {
                 bat 'javac devops1.java'
