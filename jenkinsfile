@@ -7,9 +7,9 @@ pipeline {
                 bat 'javac devops1.java'
             }
         }  
-stages('Run'){
-  steps{
-    bat 'java devops1.java'
+        stage('Run'){
+            steps{
+                 bat 'java devops1.java'
     }
-}
+  }
 }
